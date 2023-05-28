@@ -120,8 +120,6 @@ services:
       interval: 10s
       timeout: 10s
       retries: 120
-    networks:
-      - networkName
   
   apm-server:
     container_name: apm-server

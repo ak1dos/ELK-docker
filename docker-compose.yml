@@ -162,3 +162,8 @@ volumes:
     driver: local
   kibanadata:
     driver: local
+
+networks:
+  default:
+    external:
+      name: nginx-proxy

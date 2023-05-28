@@ -163,4 +163,5 @@ volumes:
 
 networks:
   nginx-proxy:
+    external: true
     driver: default

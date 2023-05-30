@@ -3,7 +3,6 @@ services:
   setup:
     container_name: elastic-setup
     image: docker.elastic.co/elasticsearch/elasticsearch:${STACK_VERSION}
-    restart: always
     volumes:
       - certs:/usr/share/elasticsearch/config/certs
     user: "0"
@@ -100,7 +99,7 @@ services:
     depends_on:
       es01:
         condition: service_healthy
-    image: docker.elastic.co/kibana/kibana:${STACK_VERSION}docker 
+    image: docker.elastic.co/kibana/kibana:${STACK_VERSION} 
     restart: always
     volumes:
       - certs:/usr/share/kibana/config/certs
